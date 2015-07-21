@@ -9,7 +9,7 @@ io.on('connection', function (socket) {
         socket.emit("WOW IT WORKED")
     });
            
-}
+});
 
 http.listen(port, function () {
     console.log('[LocateFriends] Listening on *:' + port);
