@@ -11,12 +11,6 @@ io.on('connection', function (socket) {
            
 }
 
-
-rl.on('line', function (cmd) {
-    if (cmd == 'stop') {
-        process.exit();
-    }
-});
 http.listen(port, function () {
     console.log('[LocateFriends] Listening on *:' + port);
 });
