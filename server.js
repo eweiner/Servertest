@@ -1,3 +1,4 @@
+/*
 var application = require('express')();
 var http = require('http').Server(application);
 /*
@@ -11,7 +12,18 @@ io.on('connection', function (socket) {
     });
            
 });
-*/
+
 http.listen(port, function () {
     console.log('[LocateFriends] Listening on *:' + port);
 });
+*/
+var net = require('net');
+var port = 3000
+    console.log("Listening on: " + port + '...');
+var server = net.createServer(function (socket) {
+  
+  socket.write('Echo server\r\n');
+  socket.pipe(socket);
+});
+
+server.listen(3000, '127.0.0.1');
